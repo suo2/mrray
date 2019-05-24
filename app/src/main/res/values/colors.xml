@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#4b5d7a</color>
+    <color name="colorPrimaryDark">#4b5d7a</color>
+    <color name="colorAccent">#d3b06d</color>
+
+    <color name="white">#ffffff</color>
+    <color name="color_blue">#2988CC</color>
+    <color name="action_text_color_normal">#cfcfcf</color>
+    <color name="action_text_color_pressed">#353535</color>
+    <color name="action_text_color_enabled">#818585</color>
+    <color name="text_color">#333333</color>
+    <color name="divider">#808080</color>
+    <color name="text_hint_color">#888888</color>
+    <color name="division_line_bg">#666666</color>
+    <color name="text_color_999">#999999</color>
+    <color name="text_login_hint_color">#d3d3d5</color>
+    <color name="login_divider">#dedfdf</color>
+    <color name="text_color_7b">#7b7b7b</color>
+    <color name="divider_light">#f0f0f0</color>
+
+    <!--注册-->
+    <color name="register_step_done_color">#d3b16f</color><!--未完成-->
+    <color name="register_step_undone_color">#999999</color><!--已完成-->
+    <color name="register_next_step_start_color">#e0c689</color>
+    <color name="register_next_step_end_color">#caa45b</color>
+
+    <!--首页-->
+    <color name="item_title">#282828</color>
+    <color name="item_attr_name">#999999</color>
+    <color name="item_attr_value">#282828</color>
+    <color name="item_red">#ea3a34</color>
+    <color name="item_gray">#4cffffff</color>
+    <color name="item_yellow">#cba45d</color>
+    <color name="tab_title_bg">#33435c</color>
+    <color name="maintab_name_color">#33466e</color>
+    <color name="listview_bg">#e6e5eb</color>
+    <color name="text_default_color">#999999</color>
+    <color name="light_gray">#f4f4f4</color>
+    <color name="tab_sort_select">#d9b86d</color>
+    <color name="tab_sort_unselect">#505050</color>
+    <color name="cp_manage_text_color">#7b7b7b</color>
+    <color name="cp_manage_list_bg">#f0f0f0</color>
+    <color name="cp_manage_red">#f96d3d</color>
+
+</resources>

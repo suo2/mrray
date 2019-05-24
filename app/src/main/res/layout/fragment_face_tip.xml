@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical">
+
+    <www.mrray.cn.view.TitleBar
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:title_text="人脸识别" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:paddingTop="45dp"
+                android:text="请衣着整齐平视屏幕，并正对光源"
+                android:textColor="#2f3c52"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="45dp"
+                android:background="@mipmap/header" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="45dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawableTop="@mipmap/no_eye"
+                    android:drawablePadding="8dp"
+                    android:gravity="center"
+                    android:text="不能佩戴眼镜"
+                    android:textColor="#2f3c52"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawableTop="@mipmap/no_face"
+                    android:drawablePadding="8dp"
+                    android:gravity="center"
+                    android:text="不能遮挡脸部"
+                    android:textColor="#2f3c52"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawableTop="@mipmap/no_down"
+                    android:drawablePadding="8dp"
+                    android:gravity="center"
+                    android:text="不能仰头俯拍"
+                    android:textColor="#2f3c52"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/start_take_photo"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="60dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginBottom="40dp"
+                android:background="@drawable/button_background"
+                android:text="开始拍摄"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

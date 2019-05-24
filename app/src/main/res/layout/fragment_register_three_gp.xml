@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fcfbf7"
+        android:orientation="horizontal">
+
+        <CheckBox
+            android:id="@+id/register_tourist_btn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/register_step_three_top_button_bg"
+            android:button="@null"
+            android:checked="true"
+            android:gravity="center"
+            android:paddingLeft="12dp"
+            android:paddingTop="8dp"
+            android:paddingRight="12dp"
+            android:paddingBottom="8dp"
+            android:text="游客GP"
+            android:textColor="@color/register_step_three_top_button_color"
+            android:textSize="@dimen/text_size_small" />
+
+        <CheckBox
+            android:id="@+id/register_certification_btn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/register_step_three_top_button_bg"
+            android:button="@null"
+            android:gravity="center"
+            android:paddingLeft="12dp"
+            android:paddingTop="8dp"
+            android:paddingRight="12dp"
+            android:paddingBottom="8dp"
+            android:text="认证GP"
+            android:textColor="@color/register_step_three_top_button_color"
+            android:textSize="@dimen/text_size_small" />
+
+        <CheckBox
+            android:id="@+id/register_in_the_tube_gp_btn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/register_step_three_top_button_bg"
+            android:button="@null"
+            android:gravity="center"
+            android:paddingLeft="12dp"
+            android:paddingTop="8dp"
+            android:paddingRight="12dp"
+            android:paddingBottom="8dp"
+            android:text="在管GP"
+            android:textColor="@color/register_step_three_top_button_color"
+            android:textSize="@dimen/text_size_small" />
+
+        <CheckBox
+            android:id="@+id/register_honor_btn_gp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/register_step_three_top_button_bg"
+            android:button="@null"
+            android:gravity="center"
+            android:paddingLeft="12dp"
+            android:paddingTop="8dp"
+            android:paddingRight="12dp"
+            android:paddingBottom="8dp"
+            android:text="荣誉GP"
+            android:textColor="@color/register_step_three_top_button_color"
+            android:textSize="@dimen/text_size_small" />
+    </LinearLayout>
+
+    <include
+        android:id="@+id/register_tourist_gp"
+        layout="@layout/layout_register_tourist_gp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible" />
+
+    <include
+        android:id="@+id/register_certification_gp"
+        layout="@layout/layout_register_certification_gp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
+
+    <include
+        android:id="@+id/register_in_the_tube_gp"
+        layout="@layout/layout_register_certification_gp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
+
+    <include
+        android:id="@+id/register_honor_gp"
+        layout="@layout/layout_register_certification_gp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
+
+</LinearLayout>

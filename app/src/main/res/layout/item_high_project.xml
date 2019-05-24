@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/widget_10"
+        >
+
+    <TextView
+        android:id="@+id/projectName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_toLeftOf="@+id/auth"
+        android:textColor="@color/item_title"
+        android:textSize="@dimen/text_size"
+        />
+
+    <TextView
+        android:id="@+id/auth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/item_yellow"
+        android:layout_alignBaseline="@+id/projectName"
+        android:textSize="@dimen/text_size_small_x"
+        android:gravity="center"
+        android:layout_marginLeft="@dimen/widget_10"
+        android:layout_marginRight="@dimen/recommend_logo_size"
+        android:paddingLeft="@dimen/widget_10"
+        android:paddingRight="@dimen/widget_10"
+        android:paddingTop="3dp"
+        android:paddingBottom="3dp"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/high_project_auth_bg"
+        android:text="@string/authenticated"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/widget_5"
+        android:layout_below="@+id/projectName"
+        >
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/item_red"
+                android:textSize="@dimen/text_size_title_bar"
+                android:text="" />
+
+            <TextView
+                android:id="@+id/amountUnit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/amount"
+                android:layout_alignBaseline="@+id/amount"
+                android:textColor="@color/item_red"
+                android:textSize="@dimen/text_size_small_x"
+                android:text="" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/amount"
+                android:layout_marginTop="@dimen/widget_5"
+                android:textSize="@dimen/text_size_small"
+                android:textColor="@color/item_attr_name"
+                android:text="融资金额" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/valuation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/item_attr_value"
+                android:gravity="center_horizontal"
+                android:textSize="@dimen/text_size"
+                android:text="" />
+
+            <TextView
+                android:id="@+id/valuationUnit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/valuation"
+                android:layout_alignBaseline="@+id/valuation"
+                android:textColor="@color/item_attr_value"
+                android:textSize="@dimen/text_size_small_x"
+                android:text="" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/valuation"
+                android:layout_marginTop="@dimen/widget_5"
+                android:textSize="@dimen/text_size_small"
+                android:textColor="@color/item_attr_name"
+                android:text="企业估值" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/industry"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/item_attr_value"
+                android:textSize="@dimen/text_size"
+                android:text="" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/industry"
+                android:layout_marginTop="@dimen/widget_5"
+                android:textSize="@dimen/text_size_small"
+                android:textColor="@color/item_attr_name"
+                android:text="行业类别" />
+
+        </RelativeLayout>
+    </LinearLayout>
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="@dimen/recommend_logo_size"
+        android:layout_height="@dimen/recommend_logo_size"
+        android:src="@mipmap/recommend_icon"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        />
+</RelativeLayout>

@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="80dp"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/register_one_username_edit"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="16dp"
+        android:background="@color/white"
+        android:drawableLeft="@mipmap/register_one_user_icon"
+        android:drawablePadding="8dp"
+        android:gravity="center_vertical"
+        android:hint="请输入账号"
+        android:inputType="textCapCharacters"
+        android:maxLines="1"
+        android:paddingLeft="5dp"
+        android:textColor="@color/text_color"
+        android:textColorHint="@color/text_login_hint_color"
+        android:textSize="@dimen/text_size" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.7dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="5dp"
+        android:background="@color/divider" />
+
+    <EditText
+        android:id="@+id/register_one_password_edit"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="16dp"
+        android:background="@color/white"
+        android:drawableLeft="@mipmap/register_one_password"
+        android:drawablePadding="9.5dp"
+        android:gravity="center_vertical"
+        android:hint="请输入密码"
+        android:inputType="textPassword"
+        android:maxLines="1"
+        android:paddingLeft="6.5dp"
+        android:textColor="@color/text_color"
+        android:textColorHint="@color/text_login_hint_color"
+        android:textSize="@dimen/text_size" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.7dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="5dp"
+        android:background="@color/divider" />
+
+    <EditText
+        android:id="@+id/register_one_password_sure_edit"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="16dp"
+        android:background="@color/white"
+        android:drawableLeft="@mipmap/register_one_password"
+        android:drawablePadding="9.5dp"
+        android:gravity="center_vertical"
+        android:hint="请重复密码"
+        android:inputType="textPassword"
+        android:maxLines="1"
+        android:paddingLeft="6.5dp"
+        android:textColor="@color/text_color"
+        android:textColorHint="@color/text_login_hint_color"
+        android:textSize="@dimen/text_size" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.7dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="5dp"
+        android:background="@color/divider" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <EditText
+            android:id="@+id/register_one_phone_edit"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="16dp"
+            android:background="@color/white"
+            android:drawableLeft="@mipmap/register_phone_get_code"
+            android:drawablePadding="8dp"
+            android:gravity="center_vertical"
+            android:hint="请输入手机号"
+            android:inputType="number"
+            android:maxLength="11"
+            android:maxLines="1"
+            android:paddingLeft="6dp"
+            android:textColor="@color/text_color"
+            android:textColorHint="@color/text_login_hint_color"
+            android:textSize="@dimen/text_size"
+            tools:ignore="TextFields" />
+
+        <TextView
+            android:id="@+id/register_one_get_code_txt"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="18dp"
+            android:background="#f4f4f4"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="获取验证码"
+            android:textColor="@color/text_color_999"
+            android:textSize="@dimen/text_size_small" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.7dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="5dp"
+        android:background="@color/divider" />
+
+    <EditText
+        android:id="@+id/register_one_code_edit"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="16dp"
+        android:background="@color/white"
+        android:drawableLeft="@mipmap/register_phone_get_code"
+        android:drawablePadding="8dp"
+        android:gravity="center_vertical"
+        android:hint="请输入收到的验证码  "
+        android:inputType="number"
+        android:maxLines="1"
+        android:paddingLeft="6dp"
+        android:textColor="@color/text_color"
+        android:textColorHint="@color/text_login_hint_color"
+        android:textSize="@dimen/text_size" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.7dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="5dp"
+        android:background="@color/divider" />
+
+
+</LinearLayout>

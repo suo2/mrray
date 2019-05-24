@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/register_step_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="340dp"
+        android:layout_marginTop="10dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:drawableRight="@mipmap/register_two_scroll"
+        android:drawablePadding="10dp"
+        android:gravity="center"
+        android:text="@string/please_selected_user"
+        android:textColor="@color/register_step_undone_color"
+        android:textSize="@dimen/text_size" />
+</LinearLayout>

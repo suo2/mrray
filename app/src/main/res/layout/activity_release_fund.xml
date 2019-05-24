@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <www.mrray.cn.view.TitleBar
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        app:title_text="@string/release_fund">
+    </www.mrray.cn.view.TitleBar>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:layout_marginBottom="@dimen/widget_5"
+        android:layout_above="@+id/commit"
+        android:layout_below="@+id/title_bar"
+        >
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/white"
+                android:paddingLeft="@dimen/widget_20"
+                android:paddingRight="@dimen/widget_10"
+                >
+                <www.mrray.cn.view.CustomRelativeLayout
+                    android:id="@+id/fundName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    app:ev_content_hint="请填写基金名称"
+                    app:is_required="true"
+                    app:tv_name="基金名称">
+                </www.mrray.cn.view.CustomRelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/division_line"
+                    android:background="@color/division_line_bg"
+                    ></View>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/tv_item_height"
+                    android:background="@color/white"
+                    >
+
+                    <TextView
+                        android:id="@+id/tv_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="基金LOGO"
+                        android:textSize="@dimen/text_size_small"
+                        android:textColor="@color/text_color"
+                        />
+
+                    <TextView
+                        android:id="@+id/red_star"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/tv_name"
+                        android:layout_marginLeft="@dimen/widget_10"
+                        android:textColor="@color/item_red"
+                        android:layout_centerVertical="true"
+                        android:text="*"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_content"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:text="点击上传基金LOGO"
+                        android:layout_toRightOf="@+id/red_star"
+                        android:textColor="@color/item_yellow"
+                        android:textSize="@dimen/text_size_small" />
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:src="@mipmap/no_eye"
+                        />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/division_line"
+                    android:background="@color/division_line_bg"
+                    ></View>
+
+                <www.mrray.cn.view.CustomRelativeLayout
+                    android:id="@+id/managementAgency"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:ev_content_hint="例如化妆品、零食、3C数码"
+                    app:is_required="true"
+                    app:tv_name="管理机构">
+                </www.mrray.cn.view.CustomRelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/division_line"
+                    android:background="@color/division_line_bg"
+                    ></View>
+
+                <www.mrray.cn.view.CustomRelativeLayout
+                    android:id="@+id/fundScale"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:ev_content_hint="例如化妆品、零食、3C数码"
+                    app:is_required="true"
+                    app:tv_name="基金规模">
+                </www.mrray.cn.view.CustomRelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/white"
+                android:paddingLeft="@dimen/widget_20"
+                android:paddingRight="@dimen/widget_10"
+                android:layout_marginTop="@dimen/widget_10"
+                >
+
+                <www.mrray.cn.view.CustomRelativeLayout
+                    android:id="@+id/investmentDirection"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:ev_content_hint="选择您的投资方向"
+                    app:right_img_visible="true"
+                    app:is_required="true"
+                    app:tv_name="投资方向">
+                    ></www.mrray.cn.view.CustomRelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/division_line"
+                    android:background="@color/division_line_bg"
+                    ></View>
+
+                <www.mrray.cn.view.CustomRelativeLayout
+                    android:id="@+id/investmentStage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:ev_content_hint="选择您的投资阶段"
+                    app:right_img_visible="true"
+                    app:is_required="true"
+                    app:tv_name="投资阶段">
+                    ></www.mrray.cn.view.CustomRelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/division_line"
+                    android:background="@color/division_line_bg"
+                    ></View>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/tv_item_height"
+                    android:text="请仔细填写投资方向和投资阶段,保证您的发布能快速通过审核"
+                    android:gravity="center_vertical"
+                    />
+            </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/white"
+            android:paddingLeft="@dimen/widget_20"
+            android:paddingRight="@dimen/widget_10"
+            android:layout_marginTop="@dimen/widget_10"
+            >
+
+            <www.mrray.cn.view.CustomRelativeLayout
+                android:id="@+id/subsistPeriod"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:ev_content_hint="请填写存续期"
+                app:is_required="true"
+                app:tv_name="存续期">
+            </www.mrray.cn.view.CustomRelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/division_line"
+                android:background="@color/division_line_bg"
+                ></View>
+
+            <www.mrray.cn.view.CustomRelativeLayout
+                android:id="@+id/minInvestment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:ev_content_hint="请填写最小投资额"
+                app:is_required="true"
+                app:tv_name="最小投资额">
+            </www.mrray.cn.view.CustomRelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/division_line"
+                android:background="@color/division_line_bg"
+                ></View>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/tv_item_height"
+                android:text="请仔细填写发布内容,以保证您快速发布基金"
+                android:gravity="center_vertical"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/white"
+            android:paddingLeft="@dimen/widget_20"
+            android:paddingRight="@dimen/widget_10"
+            android:layout_marginTop="@dimen/widget_10"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                >
+
+                <TextView
+                    android:id="@+id/investmentRequire"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="基金LOGO"
+                    android:textSize="@dimen/text_size_small"
+                    android:textColor="@color/text_color"
+                    />
+                <TextView
+                    android:id="@+id/investment_star"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/investmentRequire"
+                    android:layout_marginLeft="@dimen/widget_10"
+                    android:textColor="@color/item_red"
+                    android:layout_centerVertical="true"
+                    android:text="*"
+                    />
+                <CheckBox
+                    android:id="@+id/complianceLp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/widget_10"
+                    android:layout_toRightOf="@+id/investment_star"
+                    android:textSize="@dimen/text_size_small"
+                    android:textColor="@color/text_color"
+                    android:text="合规LP"
+                    />
+                <CheckBox
+                    android:id="@+id/alreadyLp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/widget_20"
+                    android:layout_toRightOf="@+id/complianceLp"
+                    android:textSize="@dimen/text_size_small"
+                    android:textColor="@color/text_color"
+                    android:text="已投LP"/>
+                <CheckBox
+                    android:id="@+id/seniorLp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/widget_10"
+                    android:layout_toRightOf="@+id/investment_star"
+                    android:layout_below="@+id/complianceLp"
+                    android:textSize="@dimen/text_size_small"
+                    android:textColor="@color/text_color"
+                    android:text="已投LP"/>
+
+            </RelativeLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/division_line"
+                android:background="@color/division_line_bg"
+                ></View>
+            <www.mrray.cn.view.CustomRelativeLayout
+                android:id="@+id/fundIntro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:ev_content_hint="简单介绍下"
+                app:is_required="true"
+                app:ev_content_lines="3"
+                app:tv_name="基金介绍">
+            </www.mrray.cn.view.CustomRelativeLayout>
+
+
+        </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/white"
+                android:paddingLeft="@dimen/widget_20"
+                android:paddingRight="@dimen/widget_10"
+                android:layout_marginTop="@dimen/widget_10"
+                >
+                <www.mrray.cn.view.CustomRelativeLayout
+                    android:id="@+id/fundManager"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:ev_content_hint="简单介绍下"
+                    app:is_required="true"
+                    app:ev_content_lines="3"
+                    app:tv_name="资金管理人">
+                </www.mrray.cn.view.CustomRelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/division_line"
+                    android:background="@color/division_line_bg"
+                    ></View>
+
+                <www.mrray.cn.view.CustomRelativeLayout
+                    android:id="@+id/pastPerformance"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:ev_content_hint="简单介绍下"
+                    app:is_required="true"
+                    app:ev_content_lines="3"
+                    app:tv_name="过往业绩">
+                </www.mrray.cn.view.CustomRelativeLayout>
+
+            </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/white"
+            android:paddingLeft="@dimen/widget_20"
+            android:paddingRight="@dimen/widget_10"
+            android:layout_marginTop="@dimen/widget_10"
+            >
+
+            <www.mrray.cn.view.CustomRelativeLayout
+                android:id="@+id/enclosure"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:ev_content_hint="简单介绍下"
+                app:is_required="true"
+                app:ev_content_lines="3"
+                app:tv_name="附件">
+            </www.mrray.cn.view.CustomRelativeLayout>
+
+        </LinearLayout>
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+    <TextView
+        android:id="@+id/commit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:padding="@dimen/widget_10"
+        android:layout_marginBottom="@dimen/widget_5"
+        android:background="@drawable/release_commit_bg"
+        android:layout_marginLeft="@dimen/widget_20"
+        android:layout_marginRight="@dimen/widget_20"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_btn"
+        android:text="立即提交"
+
+        ></TextView>
+
+</RelativeLayout>

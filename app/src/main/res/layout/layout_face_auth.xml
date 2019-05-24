@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#4c000000">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginRight="30dp"
+        android:background="@drawable/round_white_bg"
+        android:paddingBottom="40dp">
+
+        <ImageView
+            android:id="@+id/cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:padding="25dp"
+            android:src="@mipmap/cancel" />
+
+        <EditText
+            android:id="@+id/face_auth_password"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/cancel"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/login_input_background"
+            android:drawableLeft="@mipmap/login_user_password"
+            android:drawablePadding="27dp"
+            android:gravity="center_vertical"
+            android:hint="@string/please_input_password"
+            android:inputType="textPassword"
+            android:maxLines="1"
+            android:paddingLeft="17dp"
+            android:textColor="@color/text_color"
+            android:textColorHint="@color/text_login_hint_color"
+            android:textSize="@dimen/text_size"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/login_username_password_look_img"
+            app:layout_constraintTop_toBottomOf="@+id/divider3" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/face_auth_password"
+            android:layout_marginTop="23dp"
+            android:gravity="center|center_horizontal"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/cancel_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginRight="20dp"
+                android:layout_toLeftOf="@id/sure_btn"
+                android:background="@drawable/button_background"
+                android:text="取消"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/sure_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/face_auth_password"
+                android:background="@drawable/button_background"
+                android:text="确定"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

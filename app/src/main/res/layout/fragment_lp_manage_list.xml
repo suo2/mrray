@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/listview_bg"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_tab"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="@color/white"
+
+        >
+            <TextView
+                android:id="@+id/fundSelect"
+                android:layout_width="0dp"
+                android:layout_weight="6"
+                android:layout_height="match_parent"
+                android:paddingLeft="@dimen/widget_10"
+                android:paddingRight="@dimen/widget_10"
+                android:gravity="center_vertical|left"
+                android:layout_margin="@dimen/widget_5"
+                android:ellipsize="marquee"
+                android:drawableRight="@mipmap/arrow_down_default"
+                android:background="@drawable/select_fund_bg"
+                android:text="全部基金"
+                android:singleLine="true" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="4"
+            android:gravity="center"
+            >
+            <TextView
+                android:id="@+id/contributionAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:drawablePadding="2dp"
+                android:paddingLeft="@dimen/widget_10"
+                android:paddingRight="@dimen/widget_10"
+                android:drawableRight="@mipmap/sort_default"
+                android:textSize="@dimen/text_size"
+                android:textColor="@color/tab_sort_unselect"
+                android:text="@string/contribution_amount" />
+        </LinearLayout>
+    </LinearLayout>
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/refreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/widget_5"
+        android:layout_below="@+id/ll_tab"
+        >
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+        </android.support.v7.widget.RecyclerView>
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+</RelativeLayout>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:paddingTop="12dp"
+        android:paddingBottom="8dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_height="wrap_content">
+        <View
+            android:layout_width="4dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center"
+            android:layout_marginRight="14dp"
+            android:background="#607dae" />
+
+        <TextView
+            android:textStyle="bold"
+            android:textColor="#33435c"
+            android:text="V1.3历史版本"
+            android:textSize="12sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:textColor="#33435c"
+            android:layout_marginLeft="11dp"
+            android:textSize="10sp"
+            android:text="更新时间：2018-09-09 12:12:12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:padding="8dp"
+        android:background="@color/white"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="16dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:textColor="#595959"
+            android:textSize="8sp"
+            android:text="哈希值：356ghdhdh4566777777774646478787"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:textColor="#595959"
+            android:textSize="8sp"
+            android:text="备注：修改了什么什么修改了什么什么修改了什么什么修改了什么什么修改了什么什fgjk
+么修改了什么什么修改了什么什么
+
+"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+</LinearLayout>

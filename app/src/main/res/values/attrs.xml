@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="TitleBar">
+        <attr name="left_visible" format="boolean" />
+        <attr name="right_visible" format="boolean" />
+        <attr name="title_text" format="string" />
+        <attr name="left_icon" format="reference" />
+        <attr name="right_icon" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="UserInfoAuthItemView">
+        <attr name="left_img" format="reference" />
+        <attr name="title_content" format="string" />
+        <attr name="des_content" format="string" />
+        <attr name="right_img" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="HomeLinearLayout">
+        <attr name="showName" format="string" />
+    </declare-styleable>
+
+    <declare-styleable name="MineItemView">
+        <attr name="mine_left_img" format="reference" />
+        <attr name="mine_title_content" format="string" />
+        <attr name="mine_des_content" format="string" />
+        <attr name="mine_right_img" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="CustomRelativeLayout">
+        <attr name="tv_name" format="string" />
+        <attr name="ev_content_hint" format="string" />
+        <attr name="is_required" format="boolean" />
+        <attr name="ev_content_lines" format="integer"></attr>
+        <attr name="right_img_visible" format="boolean" />
+        <attr name="right_unit_visible" format="boolean" />
+    </declare-styleable>
+
+
+    <declare-styleable name="RegisterStepView">
+        <attr name="left_divider_visible" format="boolean" />
+        <attr name="right_divider_visible" format="boolean" />
+        <attr name="left_divider_color" format="color" />
+        <attr name="right_divider_color" format="color" />
+        <attr name="current_step_num" format="string" />
+        <attr name="current_step_name" format="string" />
+        <attr name="current_step_num_color" format="color" />
+        <attr name="current_step_name_color" format="color" />
+        <attr name="current_step_num_background" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="LeftBlueTextView">
+        <attr name="text_content" format="string" />
+    </declare-styleable>
+
+    <declare-styleable name="ProgressWheel">
+        <attr name="countText"      format="string"/>
+        <attr name="definitionText" format="string"/>
+        <attr name="progressColor"  format="color"/>
+        <attr name="rimColor"       format="color"/>
+        <attr name="countTextColor" format="color"/>
+        <attr name="defTextColor"   format="color"/>
+        <attr name="barWidth"       format="dimension"/>
+        <attr name="countTextSize"  format="dimension"/>
+        <attr name="defTextSize"    format="dimension"/>
+        <attr name="marginBtwText"  format="dimension"/>
+        <attr name="percentage"    format="float"/>
+    </declare-styleable>
+
+    <declare-styleable name="ConditionFilter">
+        <attr name="condition_one"  format="string"/>
+        <attr name="condition_two"  format="string"/>
+        <attr name="condition_three"  format="string"/>
+        <attr name="default_selected" format="integer"/>
+        <attr name="show_tab_count" format="integer"/>
+    </declare-styleable>
+
+    <declare-styleable name="ArrowTextView">
+        <attr name="radiuss" format="dimension" />
+        <attr name="arrowWidth" format="dimension" />
+        <attr name="arrowHeight" format="dimension" />
+        <attr name="bg" format="color" />
+    </declare-styleable>
+
+</resources>

@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f5f6f8">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#f5f6f8"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/title_bar_height"
+            android:background="#4b5d7a">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/gp_mine"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_title_bar" />
+
+            <ImageView
+                android:id="@+id/mine_setting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="16dp"
+                android:background="@mipmap/message_top" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="135dp"
+                android:background="@drawable/mine_top_bg" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <include
+                    android:id="@+id/mine_info_gp"
+                    layout="@layout/layout_mine_info_gp"
+                    android:visibility="visible" />
+
+                <include
+                    android:id="@+id/mine_info_cp"
+                    layout="@layout/layout_mine_info_cp"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="76dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/white"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/mine_vip"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:drawableTop="@mipmap/vip"
+                        android:gravity="center"
+                        android:paddingTop="15dp"
+                        android:text="会员中心" />
+
+                    <TextView
+                        android:id="@+id/mine_asset_manager"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:drawableTop="@mipmap/asset_management"
+                        android:gravity="center"
+                        android:paddingTop="18dp"
+                        android:text="资产管理" />
+
+                    <TextView
+                        android:id="@+id/mine_my_message"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="17dp"
+                        android:layout_weight="1"
+                        android:drawableTop="@mipmap/my_message"
+                        android:gravity="center"
+                        android:text="我的消息" />
+
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="18.5dp"
+                        android:layout_weight="1"
+                        android:drawableTop="@mipmap/attention"
+                        android:gravity="center"
+                        android:text="收藏关注"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                    <www.mrray.cn.view.LeftBlueTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        app:text_content="安全设置" />
+
+                    <www.mrray.cn.view.MineItemView
+                        android:id="@+id/mine_userinfo"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:visibility="gone"
+                        app:mine_left_img="@mipmap/user_info"
+                        app:mine_right_img="@mipmap/right_arrow"
+                        app:mine_title_content="账号信息" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.7dp"
+                        android:background="#f0f0f0"
+                        android:visibility="gone" />
+
+                    <www.mrray.cn.view.MineItemView
+                        android:id="@+id/mine_message_notify_item"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:visibility="gone"
+                        app:mine_left_img="@mipmap/message_notify"
+                        app:mine_right_img="@mipmap/right_arrow"
+                        app:mine_title_content="消息通知" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.7dp"
+                        android:background="#f0f0f0"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="parent" />
+
+                    <www.mrray.cn.view.MineItemView
+                        android:id="@+id/mine_user_setting"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        app:mine_left_img="@mipmap/user_setting"
+                        app:mine_right_img="@mipmap/right_arrow"
+                        app:mine_title_content="账户设置" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.7dp"
+                        android:background="#f0f0f0"
+                        app:layout_constraintBottom_toBottomOf="parent" />
+
+                    <www.mrray.cn.view.MineItemView
+                        android:id="@+id/mine_user_auth"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:visibility="gone"
+                        app:mine_des_content="未认证"
+                        app:mine_left_img="@mipmap/user_certification_info"
+                        app:mine_right_img="@mipmap/right_arrow"
+                        app:mine_title_content="用户信息认证" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                    <www.mrray.cn.view.MineItemView
+                        android:id="@+id/kefu_center"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:visibility="gone"
+                        app:mine_left_img="@mipmap/user_certification_info"
+                        app:mine_right_img="@mipmap/right_arrow"
+                        app:mine_title_content="客服中心" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.7dp"
+                        android:background="#f0f0f0"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="parent" />
+
+                    <www.mrray.cn.view.MineItemView
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:visibility="gone"
+                        app:mine_left_img="@mipmap/feaceback"
+                        app:mine_right_img="@mipmap/right_arrow"
+                        app:mine_title_content="意见反馈" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.7dp"
+                        android:background="#f0f0f0"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="parent" />
+
+                    <www.mrray.cn.view.MineItemView
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:visibility="gone"
+                        app:mine_left_img="@mipmap/about"
+                        app:mine_right_img="@mipmap/right_arrow"
+                        app:mine_title_content="关于平台" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.7dp"
+                        android:background="#f0f0f0"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="parent" />
+
+                    <www.mrray.cn.view.MineItemView
+                        android:id="@+id/login_out"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        app:mine_left_img="@mipmap/login_out"
+                        app:mine_right_img="@mipmap/right_arrow"
+                        app:mine_title_content="退出登录" />
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+</android.support.v4.widget.NestedScrollView>

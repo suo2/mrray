@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/loginFragment">
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="www.mrray.cn.module.login.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_login_to_registerFragment"
+            app:destination="@id/registerFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out" />
+        <action
+            android:id="@+id/action_login_to_forget_password"
+            app:destination="@id/forgetPasswordOneFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out" />
+        <action
+            android:id="@+id/action_login_to_face"
+            app:destination="@id/faceFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="www.mrray.cn.module.register.RegisterFragment"
+        android:label="fragment_register"
+        tools:layout="@layout/fragment_register" />
+
+    <fragment
+        android:id="@+id/forgetPasswordOneFragment"
+        android:name="www.mrray.cn.module.forgetpassword.ForgetCodeOneFragment"
+        android:label="fragment_forget_one_password"
+        tools:layout="@layout/fragment_forget_password_one">
+        <action
+            android:id="@+id/action_forget_password_two"
+            app:destination="@+id/forgetPasswordTwoFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/forgetPasswordTwoFragment"
+        android:name="www.mrray.cn.module.forgetpassword.ForgetCodeTwoFragment"
+        android:label="fragment_forget_two_password"
+        tools:layout="@layout/fragment_forget_password_two">
+        <action
+            android:id="@+id/fragment_forget_password_three"
+            app:destination="@+id/forgetPasswordThreeFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out" />
+    </fragment>
+    <fragment
+        android:id="@+id/forgetPasswordThreeFragment"
+        android:name="www.mrray.cn.module.forgetpassword.ForgetCodeThreeFragment"
+        android:label="fragment_forget_Three_password"
+        tools:layout="@layout/fragment_forget_password_three"/>
+    <fragment
+        android:id="@+id/faceFragment"
+        android:name="www.mrray.cn.module.login.FaceFragment"
+        android:label="fragment_face"
+        tools:layout="@layout/fragment_face" />
+
+</navigation>

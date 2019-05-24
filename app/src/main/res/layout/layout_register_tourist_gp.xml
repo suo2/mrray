@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?><!--游客GP-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <www.mrray.cn.view.LeftBlueTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="20dp"
+        app:text_content="补充信息" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:lineSpacingExtra="5.3sp"
+        android:text="认证GP"
+        android:textColor="#999999"
+        android:textSize="@dimen/text_size_title_bar"
+        tools:text="认证GP" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="25dp"
+        android:lineSpacingExtra="5.3sp"
+        android:text="企业营业执照、基本介绍信息、高管信息、财务信息、管理公司中基协备案号"
+        android:textColor="#999999"
+        android:textSize="14.7sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="13dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="17dp"
+        android:lineSpacingExtra="12sp"
+        android:maxLines="1"
+        android:text="---------------------------------------------------------------------------------------------------------------------------------------------------"
+        android:textColor="#999999"
+        android:textSize="8sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:lineSpacingExtra="5.3sp"
+        android:text="在管GP"
+        android:textColor="#999999"
+        android:textSize="14.7sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="25dp"
+        android:lineSpacingExtra="5.3sp"
+        android:text="企业营业执照、基本介绍信息、高管信息、财务信息、管理公司中基协备案号、基金产品中基协备案"
+        android:textColor="#999999"
+        android:textSize="14.7sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="13dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="17dp"
+        android:lineSpacingExtra="12sp"
+        android:maxLines="1"
+        android:text="---------------------------------------------------------------------------------------------------------------------------------------------------"
+        android:textColor="#999999"
+        android:textSize="8sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:lineSpacingExtra="5.3sp"
+        android:text="荣誉GP"
+        android:textColor="#999999"
+        android:textSize="14.7sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="25dp"
+        android:lineSpacingExtra="5.3sp"
+        android:text="企业营业执照、基本介绍信息、高管信息、财务信息、管理公司中基协备案号、基金产品中基协备案、在清科、投中等专业机构的年度排名属于TOP10行列证明补充材料"
+        android:textColor="#999999"
+        android:textSize="14.7sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="13dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="17dp"
+        android:lineSpacingExtra="12sp"
+        android:maxLines="1"
+        android:text="---------------------------------------------------------------------------------------------------------------------------------------------------"
+        android:textColor="#999999"
+        android:textSize="8sp" />
+</LinearLayout>

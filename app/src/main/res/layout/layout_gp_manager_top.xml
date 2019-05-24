@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/mine_top_bg"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="———  年化收益  ———"
+        android:textColor="#d1d1d1"
+        android:textSize="@dimen/text_size_small_x" />
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/gp_manager_annualized_income_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:lineSpacingExtra="-4sp"
+            android:text="0.0"
+            android:textColor="#ffffff"
+            android:textSize="24sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/gp_manager_percent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="%"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_small_x"
+            app:layout_constraintBaseline_toBaselineOf="@+id/gp_manager_annualized_income_txt"
+            app:layout_constraintLeft_toRightOf="@+id/gp_manager_annualized_income_txt" />
+    </android.support.constraint.ConstraintLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="13dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="15dp"
+            android:gravity="center"
+            android:text="基金规模"
+            android:textColor="#d1d1d1"
+            android:textSize="@dimen/text_size_small_x" />
+
+        <TextView
+            android:id="@+id/gp_detail_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="万"
+            android:textColor="#d9b86d"
+            android:textSize="@dimen/text_size_small_x" />
+    </LinearLayout>
+</LinearLayout>

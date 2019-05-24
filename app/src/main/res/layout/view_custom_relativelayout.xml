@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/tv_item_height"
+    android:background="@color/white"
+    >
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:text="基金名称"
+        android:textSize="@dimen/text_size_small"
+        android:textColor="@color/text_color"
+         />
+
+    <TextView
+        android:id="@+id/red_star"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/tv_name"
+        android:layout_marginLeft="@dimen/widget_10"
+        android:textColor="@color/item_red"
+        android:layout_centerVertical="true"
+        android:text="*"
+        />
+
+    <EditText
+        android:id="@+id/ev_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/widget_10"
+        android:layout_toRightOf="@+id/red_star"
+        android:hint="请填写基金名称"
+        android:background="@null"
+        android:textColor="@color/text_hint_color"
+        android:textSize="@dimen/text_size_small" />
+
+    <ImageView
+        android:id="@+id/right_arrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:visibility="gone"
+        android:layout_marginRight="@dimen/widget_15"
+        android:src="@mipmap/no_eye"
+        />
+    <TextView
+        android:id="@+id/tv_unit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:visibility="gone"
+        android:layout_marginRight="@dimen/widget_15"
+        />
+</RelativeLayout>

@@ -1,0 +1,717 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/mSwipeRefreshLayout">
+<android.support.v4.widget.NestedScrollView
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/listview_bg"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/title_bar_height"
+            android:background="#4b5d7a">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/manage_project"
+                android:focusableInTouchMode="true"
+                android:focusable="true"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_title_bar" />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:background="@drawable/mine_top_bg" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="@dimen/widget_15"
+                    android:layout_marginRight="@dimen/widget_15"
+                    android:padding="@dimen/widget_10"
+                    android:background="@drawable/white_circul_bg"
+                    >
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/widget_10"
+                        android:gravity="center_vertical"
+                        >
+
+                        <ImageView
+                            android:id="@+id/logoPath"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/projectName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:lines="1"
+                            android:ellipsize="end"
+                            android:layout_centerVertical="true"
+                            android:layout_toRightOf="@+id/logoPath"
+                            android:layout_marginLeft="@dimen/widget_20"
+                            android:textSize="@dimen/text_size_small"
+                            android:textColor="@color/item_yellow"
+                            />
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/division_line_x"
+                        android:background="@color/division_line_bg"
+                        ></View>
+
+                    <android.support.constraint.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        >
+                        <TextView
+                            android:id="@+id/tv_history_lp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/cp_manage_text_color"
+                            android:text="@string/history_lp"
+                            android:padding="@dimen/widget_5"
+                            android:textSize="@dimen/text_size_small_x"
+                            />
+                        <TextView
+                            android:id="@+id/history_lp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintLeft_toRightOf="@+id/tv_history_lp"
+                            android:textColor="@color/cp_manage_text_color"
+                            android:padding="@dimen/widget_5"
+                            android:textSize="@dimen/text_size_small_x"
+                            />
+                        <TextView
+                            android:id="@+id/tv_history_financing"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintTop_toBottomOf="@+id/tv_history_lp"
+                            android:textColor="@color/cp_manage_text_color"
+                            android:text="@string/history_financing"
+                            android:padding="@dimen/widget_5"
+                            android:textSize="@dimen/text_size_small_x"
+                            />
+                        <TextView
+                            android:id="@+id/history_financing"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintBaseline_toBaselineOf="@+id/tv_history_financing"
+                            app:layout_constraintLeft_toRightOf="@+id/tv_history_financing"
+                            android:textColor="@color/cp_manage_text_color"
+                            android:padding="@dimen/widget_5"
+                            android:textSize="@dimen/text_size_small_x"
+                            />
+
+                        <TextView
+                            android:id="@+id/tv_history_fund"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginEnd="8dp"
+                            android:layout_marginRight="8dp"
+                            android:padding="@dimen/widget_5"
+                            android:text="@string/history_fund"
+                            android:textColor="@color/cp_manage_text_color"
+                            android:textSize="@dimen/text_size_small_x"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/history_lp" />
+                        <TextView
+                            android:id="@+id/history_fund"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintLeft_toRightOf="@+id/tv_history_fund"
+                            android:textColor="@color/cp_manage_text_color"
+                            android:padding="@dimen/widget_5"
+                            android:textSize="@dimen/text_size_small_x"
+                            />
+
+                        <TextView
+                            android:id="@+id/tv_history_amount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/widget_5"
+                            android:text="@string/history_amount"
+                            android:textColor="@color/cp_manage_text_color"
+                            android:textSize="@dimen/text_size_small_x"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintStart_toStartOf="@+id/tv_history_fund"
+                            app:layout_constraintTop_toBottomOf="@+id/tv_history_fund" />
+                        <TextView
+                            android:id="@+id/history_amount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintLeft_toRightOf="@+id/tv_history_amount"
+                            app:layout_constraintTop_toBottomOf="@+id/tv_history_fund"
+                            android:textColor="@color/cp_manage_text_color"
+                            android:padding="@dimen/widget_5"
+                            android:textSize="@dimen/text_size_small_x"
+                            />
+
+                    </android.support.constraint.ConstraintLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/cpRelease"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:background="@drawable/cp_manage_release_bg"
+                        android:gravity="center"
+                        >
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:src="@mipmap/cp_manage_release"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/widget_5"
+                            android:textSize="@dimen/text_size_small"
+                            android:textColor="@color/white"
+                            android:text="发布项目" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/cpOperate"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_marginLeft="@dimen/widget_10"
+                        android:background="@drawable/cp_manage_operate_bg"
+                        android:gravity="center"
+                        >
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:src="@mipmap/cp_manage_operate"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/widget_5"
+                            android:textSize="@dimen/text_size_small"
+                            android:textColor="@color/white"
+                            android:text="经营总结" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/cpFile"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/widget_10"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:background="@drawable/cp_manage_file_bg"
+                        android:gravity="center"
+                        >
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:src="@mipmap/cp_manage_file"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/widget_5"
+                            android:textSize="@dimen/text_size_small"
+                            android:textColor="@color/white"
+                            android:text="文件管理" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/cpInvestor"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_marginLeft="@dimen/widget_10"
+                        android:orientation="vertical"
+                        android:background="@drawable/cp_manage_investor_bg"
+                        android:gravity="center"
+                        >
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:src="@mipmap/cp_manage_investor"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/widget_5"
+                            android:lines="1"
+                            android:ellipsize="end"
+                            android:textSize="@dimen/text_size_small"
+                            android:textColor="@color/white"
+                            android:text="投资人管理" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/cpSign"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_marginLeft="@dimen/widget_10"
+                        android:orientation="vertical"
+                        android:background="@drawable/cp_manage_release_bg"
+                        android:gravity="center"
+                        >
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:src="@mipmap/cp_manage_sign"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/widget_5"
+                            android:textSize="@dimen/text_size_small"
+                            android:textColor="@color/white"
+                            android:text="待签" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/widget_10"
+                    android:paddingLeft="@dimen/widget_15"
+                    android:paddingRight="@dimen/widget_15"
+                    android:paddingTop="@dimen/widget_10"
+                    android:paddingBottom="@dimen/widget_10"
+                    android:background="@color/white"
+                    >
+                    <www.mrray.cn.view.LeftBlueTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:text_content="@string/project_financing_situation" />
+                </LinearLayout>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/projectRecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/widget_15"
+                    android:layout_marginRight="@dimen/widget_15"
+                    ></android.support.v7.widget.RecyclerView>
+
+                <LinearLayout
+                    android:id="@+id/projectNoData"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_marginLeft="@dimen/widget_15"
+                    android:layout_marginRight="@dimen/widget_15"
+                    android:layout_marginBottom="@dimen/widget_10"
+                    android:background="@drawable/white_circul_bg"
+                    android:orientation="horizontal"
+                    android:visibility="gone"
+                    android:gravity="center"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/no_data"
+                        android:textColor="@color/item_attr_name"
+                        android:textSize="@dimen/text_size"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/widget_15"
+                    android:paddingRight="@dimen/widget_15"
+                    android:paddingTop="@dimen/widget_10"
+                    android:paddingBottom="@dimen/widget_10"
+                    android:background="@color/white"
+                    >
+                    <www.mrray.cn.view.LeftBlueTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:text_content="@string/earnings_valuation" />
+                </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/chart_height"
+                android:background="@drawable/white_circul_bg"
+                android:layout_marginRight="@dimen/widget_15"
+                android:layout_marginLeft="@dimen/widget_15"
+                android:layout_marginTop="@dimen/widget_10"
+                android:layout_marginBottom="@dimen/widget_10"
+                >
+
+                <com.github.mikephil.charting.charts.LineChart
+                    android:id="@+id/earningsLineChart"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="@dimen/widget_5"
+                    />
+
+                <TextView
+                    android:id="@+id/earningsUnit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="@dimen/widget_10"
+                    android:layout_marginTop="2dp"
+                    android:textSize="8sp"
+                    android:textColor="@color/item_attr_name"
+                    android:text=""
+                    />
+            </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/widget_15"
+                    android:paddingRight="@dimen/widget_15"
+                    android:paddingTop="@dimen/widget_10"
+                    android:paddingBottom="@dimen/widget_10"
+                    android:background="@color/white"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:id="@+id/line"
+                        android:layout_width="4dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="14dp"
+                        android:background="#607dae" />
+
+                    <TextView
+                        android:id="@+id/text_content"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:layout_toRightOf="@+id/line"
+                        android:text="@string/business_report"
+                        android:textColor="#33435c"
+                        android:textSize="@dimen/text_size" />
+
+                    <ImageView
+                        android:id="@+id/operatePreview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:paddingLeft="@dimen/widget_10"
+                        android:paddingRight="@dimen/widget_10"
+                        android:src="@mipmap/cp_manage_operate_preview"
+                        />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/chart_height"
+                    android:background="@drawable/white_circul_bg"
+                    android:layout_marginRight="@dimen/widget_15"
+                    android:layout_marginLeft="@dimen/widget_15"
+                    android:layout_marginTop="@dimen/widget_10"
+                    android:layout_marginBottom="@dimen/widget_10"
+                    >
+
+                    <com.github.mikephil.charting.charts.BarChart
+                        android:id="@+id/barChart"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="@dimen/widget_5"
+                        />
+
+                    <TextView
+                        android:id="@+id/barUnit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="@dimen/widget_10"
+                        android:layout_marginTop="2dp"
+                        android:textSize="8sp"
+                        android:textColor="@color/item_attr_name"
+                        android:text=""
+                        />
+                </RelativeLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/widget_15"
+                    android:paddingRight="@dimen/widget_15"
+                    android:paddingTop="@dimen/widget_10"
+                    android:paddingBottom="@dimen/widget_10"
+                    android:background="@color/white"
+                    >
+                    <www.mrray.cn.view.LeftBlueTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:text_content="@string/todo_list" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/widget_15"
+                    android:layout_marginRight="@dimen/widget_15"
+                    android:layout_marginTop="@dimen/widget_10"
+                    android:layout_marginBottom="@dimen/widget_10"
+                    android:orientation="horizontal"
+                    >
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/widget_10"
+                        android:background="@drawable/blue_circul_bg"
+                        android:layout_weight="1"
+                        >
+                        <TextView
+                            android:id="@+id/tv_complete"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/text_size"
+                            android:text="@string/completed"
+                            />
+
+                        <TextView
+                            android:id="@+id/completeCount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_below="@+id/tv_complete"
+                            android:layout_marginTop="@dimen/widget_5"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/text_size_big"
+                            android:text="42"
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@+id/completeCount"
+                            android:layout_toRightOf="@+id/completeCount"
+                            android:layout_marginLeft="@dimen/widget_10"
+                            android:text="个已办事件"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/text_size_small" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@mipmap/cp_manage_complete"
+                            android:layout_marginLeft="@dimen/widget_5"
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentRight="true"
+                            />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/widget_10"
+                        android:layout_marginLeft="@dimen/widget_10"
+                        android:background="@drawable/yellow_circul_bg"
+                        android:layout_weight="1"
+                        >
+                        <TextView
+                            android:id="@+id/tv_no_complete"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/text_size"
+                            android:text="@string/no_complete"
+                            />
+
+                        <TextView
+                            android:id="@+id/noCompleteCount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_below="@+id/tv_no_complete"
+                            android:layout_marginTop="@dimen/widget_5"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/text_size_big"
+                            android:text="42"
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@+id/noCompleteCount"
+                            android:layout_toRightOf="@+id/noCompleteCount"
+                            android:layout_marginLeft="@dimen/widget_10"
+                            android:text="个待办事件"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/text_size_small" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@mipmap/cp_manage_nocomplete"
+                            android:layout_marginLeft="@dimen/widget_5"
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentRight="true"
+                            />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/widget_15"
+                    android:paddingRight="@dimen/widget_15"
+                    android:paddingTop="@dimen/widget_10"
+                    android:paddingBottom="@dimen/widget_10"
+                    android:background="@color/white"
+                    >
+                    <www.mrray.cn.view.LeftBlueTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:text_content="@string/addAssets_statistics" />
+                </LinearLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/chart_height"
+                    android:background="@drawable/white_circul_bg"
+                    android:layout_marginRight="@dimen/widget_15"
+                    android:layout_marginLeft="@dimen/widget_15"
+                    android:layout_marginTop="@dimen/widget_10"
+                    android:layout_marginBottom="@dimen/widget_10"
+                    >
+
+                    <com.github.mikephil.charting.charts.LineChart
+                        android:id="@+id/addLineChart"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/chart_height"
+                        android:layout_margin="@dimen/widget_5"
+                        />
+
+                    <TextView
+                        android:id="@+id/addUnit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="@dimen/widget_10"
+                        android:layout_marginTop="2dp"
+                        android:textSize="8sp"
+                        android:textColor="@color/item_attr_name"
+                        android:text=""
+                        />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/widget_15"
+                    android:paddingRight="@dimen/widget_15"
+                    android:paddingTop="@dimen/widget_10"
+                    android:paddingBottom="@dimen/widget_10"
+                    android:layout_marginBottom="@dimen/widget_10"
+                    android:background="@color/white"
+                    >
+                    <www.mrray.cn.view.LeftBlueTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:text_content="@string/related_documents" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_projectEvent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/white_circul_bg"
+                    android:layout_marginRight="@dimen/widget_15"
+                    android:layout_marginLeft="@dimen/widget_15"
+                    android:layout_marginBottom="@dimen/widget_10"
+                    android:paddingTop="@dimen/widget_10"
+                    android:paddingLeft="@dimen/widget_10"
+                    android:paddingRight="@dimen/widget_10"
+                    android:visibility="gone"
+                    >
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/projectEventRecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    ></android.support.v7.widget.RecyclerView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/eventNoData"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_marginLeft="@dimen/widget_15"
+                    android:layout_marginRight="@dimen/widget_15"
+                    android:layout_marginBottom="@dimen/widget_10"
+                    android:background="@drawable/white_circul_bg"
+                    android:visibility="gone"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/no_data"
+                        android:textColor="@color/item_attr_name"
+                        android:textSize="@dimen/text_size"
+                        />
+                </LinearLayout>
+
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+</android.support.v4.widget.NestedScrollView>
+</android.support.v4.widget.SwipeRefreshLayout>

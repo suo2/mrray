@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/tv_item_height"
+        android:background="#EEEEEE">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/division_line"
+            android:background="#aaa" />
+
+        <TextView
+            android:id="@+id/tv_commit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/widget_20"
+            android:paddingLeft="@dimen/widget_20"
+            android:paddingRight="@dimen/widget_20"
+            android:paddingTop="@dimen/widget_5"
+            android:paddingBottom="@dimen/widget_5"
+            android:textSize="@dimen/text_size_title_bar"
+            android:background="@drawable/release_commit_bg"
+            android:textColor="@color/white"
+            android:text="@string/commit"
+             />
+
+        <TextView
+            android:id="@+id/tv_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/widget_20"
+            android:paddingLeft="@dimen/widget_20"
+            android:paddingRight="@dimen/widget_20"
+            android:paddingTop="@dimen/widget_5"
+            android:paddingBottom="@dimen/widget_5"
+            android:text="@string/cancel"
+            android:textColor="@color/item_yellow"
+            android:background="@drawable/high_project_auth_bg"
+            android:textSize="@dimen/text_size_title_bar" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/division_line"
+            android:background="#aaa" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/optionspicker"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:orientation="horizontal">
+
+        <com.contrarywind.view.WheelView
+            android:id="@+id/options1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/widget_5"
+             />
+        <com.contrarywind.view.WheelView
+            android:id="@+id/options2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/widget_5"
+            android:visibility="gone"
+            />
+        <com.contrarywind.view.WheelView
+            android:id="@+id/options3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:padding="@dimen/widget_5"
+            />
+
+    </LinearLayout>
+
+
+</LinearLayout>

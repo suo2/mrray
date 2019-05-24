@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_tab"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/filter_height"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:id="@+id/llConditionOne"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        >
+        <TextView
+            android:id="@+id/conditionOne"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:drawablePadding="2dp"
+            android:paddingLeft="@dimen/widget_10"
+            android:paddingRight="@dimen/widget_10"
+            android:drawableRight="@mipmap/sort_default"
+            android:textSize="@dimen/text_size"
+            android:textColor="@color/tab_sort_unselect"
+            android:text="@string/newest" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llConditionTwo"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        >
+        <TextView
+            android:id="@+id/conditionTwo"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:paddingLeft="@dimen/widget_10"
+            android:paddingRight="@dimen/widget_10"
+            android:drawableRight="@mipmap/sort_default"
+            android:textSize="@dimen/text_size"
+            android:textColor="@color/tab_sort_unselect"
+            android:text="@string/annualized" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llConditionThree"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        >
+        <TextView
+            android:id="@+id/conditionThree"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:paddingLeft="@dimen/widget_10"
+            android:paddingRight="@dimen/widget_10"
+            android:drawableRight="@mipmap/sort_default"
+            android:textSize="@dimen/text_size"
+            android:textColor="@color/tab_sort_unselect"
+            android:text="@string/amount" />
+    </LinearLayout>
+</LinearLayout>

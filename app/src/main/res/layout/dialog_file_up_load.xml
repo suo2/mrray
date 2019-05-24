@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="30dp"
+    android:layout_marginRight="30dp"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="文件上传"
+        android:textColor="#656565"
+        android:textSize="@dimen/text_size_big"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="22dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="15dp"
+        android:drawableLeft="@mipmap/file"
+        android:drawablePadding="10dp"
+        android:gravity="center|left"
+        android:text="上传文件"
+        android:textColor="#656565"
+        android:textSize="@dimen/text_size" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:background="@drawable/register_up_load__add_bg"
+        android:orientation="vertical"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@mipmap/add" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:paddingTop="5dp"
+            android:text="上传文件"
+            android:textColor="#999999"
+            android:textSize="@dimen/text_size_small" />
+    </LinearLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp">
+
+        <TextView
+            android:id="@+id/file_up_load_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="#eeecea"
+            android:paddingLeft="15dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:text="文件1号.doc"
+            android:textSize="@dimen/text_size_small"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/file_up_load_delete"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:background="@mipmap/delete"
+            app:layout_constraintRight_toRightOf="parent" />
+    </android.support.constraint.ConstraintLayout>
+
+    <TextView
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="15dp"
+        android:drawableLeft="@mipmap/file_type"
+        android:drawablePadding="10dp"
+        android:gravity="center|left"
+        android:text="文件类别"
+        android:textColor="#656565"
+        android:textSize="@dimen/text_size" />
+
+    <RadioGroup
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="30dp"
+            android:checked="true"
+            android:text="尽调材料"
+            android:textColor="#656565"
+            android:textSize="@dimen/text_size_small" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="尽调日报"
+            android:textColor="#656565"
+            android:textSize="@dimen/text_size_small" />
+    </RadioGroup>
+
+    <RelativeLayout
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="30dp">
+
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="35dp"
+            android:background="@drawable/button_background_line"
+            android:text="取消"
+            android:textColor="@color/colorAccent"
+            android:textSize="@dimen/text_size" />
+
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="35dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/button_background"
+            android:text="确定"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size" />
+    </RelativeLayout>
+</LinearLayout>

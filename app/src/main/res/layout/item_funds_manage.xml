@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="@dimen/widget_5"
+    android:paddingTop="@dimen/widget_5"
+    android:paddingRight="@dimen/widget_5"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/fundName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/item_title"
+        android:textSize="@dimen/text_size"
+        android:text="成都德同银科锦程创业投资企业"
+        android:paddingLeft="@dimen/widget_5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/fundName">
+
+        <LinearLayout
+            android:id="@+id/intro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/high_project_item_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="2dp"
+                    android:drawableLeft="@mipmap/company_count_icon"
+                    android:text="参股公司数" />
+
+                <TextView
+                    android:id="@+id/investCompanyCount"
+                    style="@style/high_project_item_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/widget_10"
+                    android:text="19" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/high_project_item_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="2dp"
+                    android:drawableLeft="@mipmap/lp_count_icon"
+                    android:text="出资LP数" />
+
+                <TextView
+                    android:id="@+id/lpCount"
+                    style="@style/high_project_item_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/widget_10"
+                    android:text="19" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="5dp"
+            android:gravity="center_horizontal"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/widget_10"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/annualizedIncome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textColor="@color/item_red"
+                android:textSize="22sp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/annualizedIncome"
+                android:layout_alignBaseline="@+id/annualizedIncome"
+                android:text="%"
+                android:textSize="@dimen/text_size_small_x"
+                android:textColor="@color/item_red"
+                />
+
+            <TextView
+                android:layout_below="@+id/annualizedIncome"
+                style="@style/high_project_item_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/annual_income" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+</android.support.constraint.ConstraintLayout>

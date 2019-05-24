@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?><!--注册页面 上方步骤-->
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:orientation="horizontal">
+
+    <www.mrray.cn.view.RegisterStepView
+        android:id="@+id/register_step_one"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:current_step_name="@string/username_and_password"
+        app:current_step_name_color="@color/register_step_done_color"
+        app:current_step_num="1"
+        app:current_step_num_background="@drawable/register_step_num_background_done"
+        app:current_step_num_color="@color/register_step_done_color"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/register_step_two"
+        app:left_divider_visible="false"
+        app:right_divider_color="@color/register_step_done_color"
+        app:right_divider_visible="true"
+        tools:ignore="MissingConstraints" />
+
+    <www.mrray.cn.view.RegisterStepView
+        android:id="@+id/register_step_two"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:current_step_name="@string/selected_user"
+        app:current_step_name_color="@color/register_step_undone_color"
+        app:current_step_num="2"
+        app:current_step_num_background="@drawable/register_step_num_background_undone"
+        app:current_step_num_color="@color/register_step_undone_color"
+        app:layout_constraintLeft_toRightOf="@id/register_step_one"
+        app:layout_constraintRight_toLeftOf="@id/register_step_four"
+        app:left_divider_color="@color/register_step_undone_color"
+        app:left_divider_visible="true"
+        app:right_divider_color="@color/register_step_undone_color"
+        app:right_divider_visible="true"
+        tools:ignore="MissingConstraints" />
+
+    <www.mrray.cn.view.RegisterStepView
+        android:id="@+id/register_step_three"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:current_step_name="@string/additional_information"
+        app:current_step_name_color="@color/register_step_undone_color"
+        app:current_step_num="3"
+        app:current_step_num_background="@drawable/register_step_num_background_undone"
+        app:current_step_num_color="@color/register_step_undone_color"
+        app:layout_constraintLeft_toRightOf="@+id/register_step_two"
+        app:layout_constraintRight_toLeftOf="@id/register_step_four"
+        app:left_divider_color="@color/register_step_undone_color"
+        app:left_divider_visible="true"
+        app:right_divider_color="@color/register_step_undone_color"
+        app:right_divider_visible="true"
+        tools:ignore="MissingConstraints" />
+
+    <www.mrray.cn.view.RegisterStepView
+        android:id="@+id/register_step_four"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:current_step_name="@string/terms_of_service"
+        app:current_step_name_color="@color/register_step_undone_color"
+        app:current_step_num="3"
+        app:current_step_num_background="@drawable/register_step_num_background_undone"
+        app:current_step_num_color="@color/register_step_undone_color"
+        app:layout_constraintLeft_toRightOf="@+id/register_step_two"
+        app:layout_constraintRight_toRightOf="parent"
+        app:left_divider_color="@color/register_step_undone_color"
+        app:left_divider_visible="true"
+        app:right_divider_color="@color/register_step_undone_color"
+        app:right_divider_visible="false"
+        tools:ignore="MissingConstraints" />
+</android.support.constraint.ConstraintLayout>

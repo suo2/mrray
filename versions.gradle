@@ -1,0 +1,195 @@
+/**
+ * Shared file between builds so that they can all use the same dependencies and
+ * maven repositories.
+ **/
+ext.deps = [:]
+def versions = [:]
+versions.arch_core = "1.1.1"
+versions.room = "1.1.1"
+versions.lifecycle = "1.1.1"
+versions.support = "28.0.0"
+versions.dagger = "2.15"
+versions.junit = "4.12"
+versions.espresso = "3.0.1"
+versions.retrofit = "2.3.0"
+versions.okhttp_logging_interceptor = "3.9.0"
+versions.mockwebserver = "3.8.1"
+versions.apache_commons = "2.5"
+versions.mockito = "2.7.19"
+versions.mockito_all = "1.10.19"
+versions.dexmaker = "2.2.0"
+versions.constraint_layout = "1.0.2"
+versions.glide = "4.7.1"
+versions.timber = "4.5.1"
+versions.android_gradle_plugin = '3.2.1'
+versions.rxjava2 = "2.2.2"
+versions.rx_android = "2.0.1"
+versions.atsl_runner = "1.0.1"
+versions.atsl_rules = "1.0.1"
+versions.hamcrest = "1.3"
+versions.kotlin = "1.2.71"
+versions.paging = "1.0.1"
+versions.navigation = "1.0.0-alpha06"
+versions.work = "1.0.0-alpha09"
+versions.logger = "2.2.0"
+versions.arouter = "1.4.0"
+versions.arouter_compiler = "1.2.1"
+versions.arouter_register = "1.0.2"
+versions.anko = "0.10.7"
+versions.jsbridge = "1.0.4"
+versions.lottieVersion = "2.7.0"
+versions.banner = "2.1.4"
+versions.rxdownload = "1.2.7"
+versions.rxpermission = "0.10.2"
+versions.takephoto = "v2.2.3"
+def deps = [:]
+
+def support = [:]
+support.annotations = "com.android.support:support-annotations:$versions.support"
+support.app_compat = "com.android.support:appcompat-v7:$versions.support"
+support.recyclerview = "com.android.support:recyclerview-v7:$versions.support"
+support.cardview = "com.android.support:cardview-v7:$versions.support"
+support.design = "com.android.support:design:$versions.support"
+support.v4 = "com.android.support:support-v4:$versions.support"
+support.core_utils = "com.android.support:support-core-utils:$versions.support"
+deps.support = support
+
+def room = [:]
+room.runtime = "android.arch.persistence.room:runtime:$versions.room"
+room.compiler = "android.arch.persistence.room:compiler:$versions.room"
+room.rxjava2 = "android.arch.persistence.room:rxjava2:$versions.room"
+room.testing = "android.arch.persistence.room:testing:$versions.room"
+deps.room = room
+
+def lifecycle = [:]
+lifecycle.runtime = "android.arch.lifecycle:runtime:$versions.lifecycle"
+lifecycle.extensions = "android.arch.lifecycle:extensions:$versions.lifecycle"
+lifecycle.java8 = "android.arch.lifecycle:common-java8:$versions.lifecycle"
+lifecycle.compiler = "android.arch.lifecycle:compiler:$versions.lifecycle"
+deps.lifecycle = lifecycle
+
+def arch_core = [:]
+arch_core.testing = "android.arch.core:core-testing:$versions.arch_core"
+deps.arch_core = arch_core
+
+def retrofit = [:]
+retrofit.runtime = "com.squareup.retrofit2:retrofit:$versions.retrofit"
+retrofit.gson = "com.squareup.retrofit2:converter-gson:$versions.retrofit"
+retrofit.mock = "com.squareup.retrofit2:retrofit-mock:$versions.retrofit"
+retrofit.rxjava = "com.squareup.retrofit2:adapter-rxjava2:$versions.retrofit"
+deps.retrofit = retrofit
+deps.okhttp_logging_interceptor = "com.squareup.okhttp3:logging-interceptor:${versions.okhttp_logging_interceptor}"
+
+def dagger = [:]
+dagger.runtime = "com.google.dagger:dagger:$versions.dagger"
+dagger.android = "com.google.dagger:dagger-android:$versions.dagger"
+dagger.android_support = "com.google.dagger:dagger-android-support:$versions.dagger"
+dagger.compiler = "com.google.dagger:dagger-compiler:$versions.dagger"
+dagger.android_support_compiler = "com.google.dagger:dagger-android-processor:$versions.dagger"
+
+deps.dagger = dagger
+
+def espresso = [:]
+espresso.core = "com.android.support.test.espresso:espresso-core:$versions.espresso"
+espresso.contrib = "com.android.support.test.espresso:espresso-contrib:$versions.espresso"
+espresso.intents = "com.android.support.test.espresso:espresso-intents:$versions.espresso"
+deps.espresso = espresso
+
+def atsl = [:]
+atsl.runner = "com.android.support.test:runner:$versions.atsl_runner"
+atsl.rules = "com.android.support.test:rules:$versions.atsl_runner"
+deps.atsl = atsl
+
+def mockito = [:]
+mockito.core = "org.mockito:mockito-core:$versions.mockito"
+mockito.all = "org.mockito:mockito-all:$versions.mockito_all"
+deps.mockito = mockito
+
+def kotlin = [:]
+kotlin.stdlib = "org.jetbrains.kotlin:kotlin-stdlib-jre7:$versions.kotlin"
+kotlin.test = "org.jetbrains.kotlin:kotlin-test-junit:$versions.kotlin"
+kotlin.plugin = "org.jetbrains.kotlin:kotlin-gradle-plugin:$versions.kotlin"
+kotlin.allopen = "org.jetbrains.kotlin:kotlin-allopen:$versions.kotlin"
+
+deps.kotlin = kotlin
+deps.paging = "android.arch.paging:runtime:$versions.paging"
+
+def glide = [:]
+glide.runtime = "com.github.bumptech.glide:glide:$versions.glide"
+glide.compiler = "com.github.bumptech.glide:compiler:$versions.glide"
+deps.glide = glide
+
+def anko = [:]
+anko.v7_common = "org.jetbrains.anko:anko-appcompat-v7-commons:$versions.anko"
+anko.design = "org.jetbrains.anko:anko-design:$versions.anko"
+anko.design_coroutines = "org.jetbrains.anko:anko-design-coroutines:$versions.anko"
+anko.v4_common = "org.jetbrains.anko:anko-support-v4-commons:$versions.anko"
+anko.constraint_layout = "org.jetbrains.anko:anko-constraint-layout:$versions.anko"
+deps.anko = anko
+
+//通用库
+deps.dexmaker = "com.linkedin.dexmaker:dexmaker-mockito:$versions.dexmaker"
+deps.constraint_layout = "com.android.support.constraint:constraint-layout:$versions.constraint_layout"
+deps.timber = "com.jakewharton.timber:timber:$versions.timber"
+deps.junit = "junit:junit:$versions.junit"
+deps.mock_web_server = "com.squareup.okhttp3:mockwebserver:$versions.mockwebserver"
+deps.rxjava2 = "io.reactivex.rxjava2:rxjava:$versions.rxjava2"
+deps.rx_android = "io.reactivex.rxjava2:rxandroid:$versions.rx_android"
+deps.hamcrest = "org.hamcrest:hamcrest-all:$versions.hamcrest"
+deps.android_gradle_plugin = "com.android.tools.build:gradle:$versions.android_gradle_plugin"
+deps.logger = "com.orhanobut:logger:$versions.logger"
+deps.arouter = "com.alibaba:arouter-api:$versions.arouter"
+deps.arouter_compiler = "com.alibaba:arouter-compiler:$versions.arouter_compiler"
+deps.jsbridge = "com.github.lzyzsd:jsbridge:$versions.jsbridge"
+deps.lottie = "com.airbnb.android:lottie:$versions.lottieVersion"
+deps.rxdownload = "zlc.season:rxdownload3:$versions.rxdownload"
+deps.rxpermission = "com.github.tbruyelle:rxpermissions:$versions.rxpermission"
+deps.takephoto = "com.github.LuckSiege.PictureSelector:picture_library:$versions.takephoto"
+ext.deps = deps
+
+def build_versions = [:]
+build_versions.min_sdk = 16
+build_versions.target_sdk = 28
+build_versions.build_tools = "28.0.3"
+ext.build_versions = build_versions
+
+def work = [:]
+work.runtime = "android.arch.work:work-runtime:$versions.work"
+work.testing = "android.arch.work:work-testing:$versions.work"
+work.firebase = "android.arch.work:work-firebase:$versions.work"
+work.runtime_ktx = "android.arch.work:work-runtime-ktx:$versions.work"
+deps.work = work
+
+def navigation = [:]
+navigation.runtime = "android.arch.navigation:navigation-runtime:$versions.navigation"
+navigation.runtime_ktx = "android.arch.navigation:navigation-runtime-ktx:$versions.navigation"
+navigation.fragment = "android.arch.navigation:navigation-fragment:$versions.navigation"
+navigation.fragment_ktx = "android.arch.navigation:navigation-fragment-ktx:$versions.navigation"
+navigation.safe_args_plugin = "android.arch.navigation:navigation-safe-args-gradle-plugin:$versions.navigation"
+navigation.testing_ktx = "android.arch.navigation:navigation-testing-ktx:$versions.navigation"
+deps.navigation = navigation
+
+def banner = [:]
+banner.convenient_banner = "com.bigkoo:ConvenientBanner:$versions.banner"
+deps.banner = banner
+
+//网络模块url
+def url = [:]
+url.online = "\"http://39.98.39.67:8112/\""
+url.test = "\"http://39.98.39.67:8112/\""
+url.dev = "\"http://39.98.39.67:8112/\""
+//url.dev = "\"http://192.168.125.9:8112/\""
+//url.dev = "\"http://192.168.125.126/\""
+deps.url = url
+
+
+//网络模块url
+def h5_url = [:]
+h5_url.online = "\"http://192.168.125.104:8080/#\""
+h5_url.test = "\"http://192.168.125.104:8080/#\""
+h5_url.dev = "\"http://39.98.39.67:3014/dist/#\""
+//h5_url.dev = "\"http://192.168.125.9:3014/dist/#\""
+//h5_url.dev = "\"http://192.168.125.104:8080/#\""
+deps.h5_url = h5_url
+
+ext.deps = deps

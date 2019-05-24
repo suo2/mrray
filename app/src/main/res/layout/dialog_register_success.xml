@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <View
+            android:background="@drawable/register_success_view"
+            android:layout_centerInParent="true"
+            android:layout_width="140dp"
+            android:layout_height="140dp"/>
+        <View
+            android:background="@color/white"
+            android:layout_marginTop="50dp"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"/>
+    <ImageView
+        android:layout_marginTop="21dp"
+        android:src="@mipmap/register_success"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    </RelativeLayout>
+    <LinearLayout
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="18dp"
+            android:layout_marginRight="25dp"
+            android:text="注册成功，感谢您的加盟！"
+            android:layout_gravity="center"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="20dp"
+            android:gravity="center"
+            android:text="请到www.jiaozifin.com登录后上传认证信息，开始你的财富之旅"
+            android:textColor="#80404040"
+            android:textSize="12sp" />
+        <TextView
+            android:id="@+id/sure"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginBottom="25dp"
+            android:background="@drawable/register_next_step_background"
+            android:gravity="center"
+            android:text="立即前往"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+</LinearLayout>

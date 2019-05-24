@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@mipmap/ofline_activity" android:state_checked="true" />
+    <item android:drawable="@mipmap/activity" android:state_checked="false" />
+</selector>

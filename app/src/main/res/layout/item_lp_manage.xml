@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:background="@color/white"
+    android:paddingLeft="@dimen/widget_5"
+    android:paddingTop="@dimen/widget_5"
+    android:paddingRight="@dimen/widget_5"
+    >
+
+
+    <ImageView
+        android:id="@+id/headImage"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_margin="@dimen/widget_5"
+        android:layout_alignParentLeft="true"
+        android:scaleType="centerInside"
+        android:src="@mipmap/ic_launcher"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="@dimen/widget_5"
+        android:layout_toRightOf="@+id/headImage"
+        >
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/widget_5"
+            >
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/item_title"
+                android:textSize="@dimen/text_size"
+                android:lines="1"
+                android:ellipsize="end"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:layout_toLeftOf="@+id/auth"
+                />
+
+            <TextView
+                android:id="@+id/auth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/item_yellow"
+                android:textSize="@dimen/text_size_small_x"
+                android:gravity="center"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="@dimen/widget_10"
+                android:layout_marginRight="@dimen/recommend_logo_size"
+                android:paddingLeft="@dimen/widget_10"
+                android:paddingRight="@dimen/widget_10"
+                android:minWidth="40dp"
+                android:paddingTop="3dp"
+                android:paddingBottom="3dp"
+                android:lines="1"
+                android:background="@drawable/high_project_auth_bg"
+                android:text="@string/authenticated"
+                />
+            <ImageView
+                android:id="@+id/chat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/chat_icon"
+                android:paddingLeft="@dimen/widget_10"
+                android:paddingRight="@dimen/widget_10"
+                android:layout_alignParentRight="true"
+                />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/fundName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:lines="1"
+            android:ellipsize="end"
+            style="@style/high_project_item_value"
+            />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/top"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/high_project_item_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:lines="1"
+                        android:ellipsize="end"
+                        android:text="出资额" />
+
+                    <TextView
+                        style="@style/high_project_item_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:lines="1"
+                        android:ellipsize="end"
+                        android:layout_weight="1"
+                        android:text="当前企元" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.5"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/investmentAmount"
+                        style="@style/high_project_item_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:lines="1"
+                        android:ellipsize="end"
+                        android:layout_weight="1"
+                        android:text="" />
+
+                    <TextView
+                        android:id="@+id/enterpriseAssets"
+                        style="@style/high_project_item_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:lines="1"
+                        android:ellipsize="end"
+                        android:layout_weight="1"
+                        android:text="" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/high_project_item_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:lines="1"
+                        android:ellipsize="end"
+                        android:layout_weight="1"
+                        android:text="出资比例" />
+
+                    <TextView
+                        style="@style/high_project_item_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:lines="1"
+                        android:ellipsize="end"
+                        android:layout_weight="1"
+                        android:text="当前增元" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.5"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/investmentShare"
+                        style="@style/high_project_item_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:lines="1"
+                        android:ellipsize="end"
+                        android:layout_weight="1"
+                        android:text="" />
+
+                    <TextView
+                        android:id="@+id/addAssets"
+                        style="@style/high_project_item_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:lines="1"
+                        android:ellipsize="end"
+                        android:layout_weight="1"
+                        android:text="" />
+
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+</RelativeLayout>

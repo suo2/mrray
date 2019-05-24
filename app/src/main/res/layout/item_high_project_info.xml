@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:paddingLeft="@dimen/widget_5"
+    android:paddingTop="@dimen/widget_5"
+    android:paddingRight="@dimen/widget_5">
+
+    <RelativeLayout
+        android:id="@+id/top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/logoPath"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:scaleType="centerInside"
+            android:src="@mipmap/ic_launcher"/>
+
+        <TextView
+            android:id="@+id/projectName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/logoPath"
+            android:layout_marginLeft="@dimen/widget_10"
+            android:textColor="@color/item_title"
+            android:textSize="@dimen/text_size"
+            android:text=""
+            />
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/projectName"
+            android:layout_toRightOf="@+id/logoPath"
+            android:layout_marginLeft="@dimen/widget_10"
+            android:layout_marginTop="@dimen/widget_10"
+            android:layout_alignBaseline="@+id/logoPath"
+            android:orientation="horizontal"
+            >
+            <TextView
+                android:id="@+id/progress_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/item_attr_value"
+                android:textSize="@dimen/text_size"
+                android:text="完成百分比"
+                />
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_toRightOf="@+id/progress_title"
+                android:layout_toLeftOf="@+id/progressBarValue"
+                android:layout_marginRight="@dimen/widget_10"
+                android:layout_marginLeft="@dimen/widget_10"
+                android:layout_centerVertical="true"
+                android:max="100"
+                android:progressDrawable="@drawable/progress_bar_layer_list" />
+                />
+
+            <TextView
+                android:id="@+id/progressBarValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/item_red"
+                android:layout_toLeftOf="@+id/ratio"
+                android:layout_centerVertical="true"
+                android:textSize="@dimen/text_size"
+                />
+
+            <TextView
+                android:id="@+id/ratio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/item_red"
+                android:layout_alignParentRight="true"
+                android:layout_alignBaseline="@+id/progressBarValue"
+                android:textSize="@dimen/text_size_small_x"
+                android:text="%"
+                />
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/top"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/high_project_item_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="发布时间" />
+
+                <TextView
+                    style="@style/high_project_item_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="所在地" />
+
+                <TextView
+                    style="@style/high_project_item_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="融资金额" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.5"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/startTime"
+                    style="@style/high_project_item_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="" />
+
+                <TextView
+                    android:id="@+id/address"
+                    style="@style/high_project_item_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="" />
+
+                <TextView
+                    android:id="@+id/amount"
+                    style="@style/high_project_item_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/high_project_item_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="伦次" />
+
+                <TextView
+                    style="@style/high_project_item_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="行业" />
+
+                <TextView
+                    style="@style/high_project_item_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="已融金额" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.5"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/rotation"
+                    style="@style/high_project_item_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="" />
+
+                <TextView
+                    android:id="@+id/industry"
+                    style="@style/high_project_item_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="" />
+
+                <TextView
+                    android:id="@+id/amountInvested"
+                    style="@style/high_project_item_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

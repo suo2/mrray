@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/listview_bg"
+    android:orientation="vertical">
+
+    <www.mrray.cn.view.ConditionFilterView
+        android:id="@+id/filter"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/filter_height"
+        app:condition_one="@string/newest"
+        app:condition_two="@string/annualized"
+        app:condition_three="@string/amount"
+        app:default_selected= "0"
+        >
+    </www.mrray.cn.view.ConditionFilterView>
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/refreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/widget_5"
+        android:layout_below="@+id/filter"
+        >
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </android.support.v7.widget.RecyclerView>
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+</RelativeLayout>
